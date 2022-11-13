@@ -7,16 +7,16 @@
 Запускать всё через root ``sudo -s``
 
 Открыть скрипт в тектовом редакторе nano / vim:  
-``nano myscript.sh``  
-``vi myscript.sh``
+``$ nano myscript.sh``  
+``$ vi myscript.sh``
 
 Первая строка в bash скрипте:  
 ``#!/bin/bash``
 
 Сделать файл исполняемым:  
-``chmod +x ./myscript``  
+``$ chmod +x ./myscript``  
 Выполнить скрипт:  
-``./myscript``
+``$ ./myscript``
 
 ### 2. Syntax
 
@@ -60,7 +60,7 @@
 
 11. ``file <file_name>`` - выводит на экран тип файла (настоящий тип, а не указанный в расширении)
 
-#### 2.3 Text file  
+#### 2.3 Text file
 
 1. ``strings <file>`` - выводит все строки с печатными символами из файла "file" на экран
 
@@ -117,16 +117,16 @@
 
 ### 3 Other functions
 
-#### 3.1 Перенаправление вывода  
+#### 3.1 Перенаправление вывода
 Bash позволяет перенаправлять стандартный вывод в файлы с помощью операторов ``>`` и ``>>``  
-``echo hello! > 1.txt`` - если файл не существовал, он будет создан, иначе он будет перезаписан  
-``echo hello! >> 1.txt`` - если файл не существовал, он будет создан, иначе дописывает в конец файла  
-``echo hello! > /dev/null`` - скрыть все сообщения, не сохраняя их
+``$ echo hello! > 1.txt`` - если файл не существовал, он будет создан, иначе он будет перезаписан  
+``$ echo hello! >> 1.txt`` - если файл не существовал, он будет создан, иначе дописывает в конец файла  
+``$ echo hello! > /dev/null`` - скрыть все сообщения, не сохраняя их
 
-#### 3.2 Конвейер (pipe)  
+#### 3.2 Конвейер (pipe)
 Если нужно перенаправить вывод одной команды на вход другой используется оператор ``|``.  
-``tail -n 500 2010.log | grep -w -i "error"``  
-``ls -l | grep "\.txt$"``
+``$ tail -n 500 2010.log | grep -w -i "error"``  
+``$ ls -l | grep "\.txt$"``
 
 #### 3.3 Регулярные выражения
 ``egrep [opts] "pattern" file``
@@ -135,22 +135,22 @@ Bash позволяет перенаправлять стандартный вы
 
 ### Math
 
-``-eq`` - ( = ) is equal to  
+``-eq`` - ``=`` is equal to  
 ``if [ "$a" -eq "$b" ]``
 
-``-ne`` - ( != ) is not equal to  
+``-ne`` - ``!=`` is not equal to  
 ``if [ "$a" -ne "$b" ]``
 
-``-gt`` - is greater than  
+``-gt`` - ``>`` is greater than  
 ``if [ "$a" -gt "$b" ]``
 
-``-ge`` - is greater than or equal to  
+``-ge`` - ``>=`` is greater than or equal to  
 ``if [ "$a" -ge "$b" ]``
 
-``-lt`` - is less than  
+``-lt`` - ``<`` is less than  
 ``if [ "$a" -lt "$b" ]``
 
-``-le`` - is less than or equal to  
+``-le`` - ``<=`` is less than or equal to  
 ``if [ "$a" -le "$b" ]``
 
 ``<`` - is less than (within double parentheses)  
