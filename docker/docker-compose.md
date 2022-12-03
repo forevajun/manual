@@ -27,33 +27,33 @@ services:
 
 ## Терминал
 
-- ``docker-compose -v``  
-- ``docker-machine ip default`` - IP адрес виртуальной машины, на которой работает Docker
+- ``docker compose -v``  
+- ``docker machine ip default`` - IP адрес виртуальной машины, на которой работает Docker
 
 В папке с файлом ``docker-compose.yaml`` / ``docker-compose.yml`` запустить
 
-- ``docker-compose build`` - собрать сервисы из ``docker-compose.yml`` (аналог ``docker build``)  
-- ``docker-compose up`` - создать и запустить контейнеры ``docker-compose.yml``  
+- ``docker compose build`` - собрать сервисы из ``docker-compose.yml`` (аналог ``docker build``)  
+- ``docker compose up`` - создать и запустить контейнеры ``docker-compose.yml``  
 > ``-d``, ``--detach`` - запуск в фоне  
 > ``--build`` - собрать образы перед запуском контейнеров  
 > ``--scale`` - запустить несколько инстансов сервиса
 ```bash
-$ docker-compose up --scale myapp=5 # запустить 5 контейнеров myapp
+$ docker compose up --scale myapp=5 # запустить 5 контейнеров myapp
 ```
 
-- ``docker-compose run`` - запуск с параметрами  
-- ``docker-compose start`` - запустить остановленных контейнеров (запустятся в фоне)  
-- ``docker-compose stop`` - остановить контейнеры  
-- ``docker-compose images`` - список образов, которые используются в текущем ``docker-compose.yml``  
-- ``docker-compose ps`` - запущенные контейнеры  
-- ``docker-compose top`` - список запущеных процессов  
-- ``docker-compose logs`` - логи в контейнерах  
-- ``docker-compose down`` - останавливает и удаляет все контейнеры, относящиеся к текущему ``docker-compose.yml``   
-- ``docker-compose rm [SERVICE_NAME]`` - удаление контейнера
+- ``docker compose run`` - запуск с параметрами  
+- ``docker compose start`` - запустить остановленных контейнеров (запустятся в фоне)  
+- ``docker compose stop`` - остановить контейнеры  
+- ``docker compose images`` - список образов, которые используются в текущем ``docker-compose.yml``  
+- ``docker compose ps`` - запущенные контейнеры  
+- ``docker compose top`` - список запущеных процессов  
+- ``docker compose logs`` - логи в контейнерах  
+- ``docker compose down`` - останавливает и удаляет все контейнеры, относящиеся к текущему ``docker-compose.yml``   
+- ``docker compose rm [SERVICE_NAME]`` - удаление контейнера
 
 ```bash
-$ docker-compose rm db
-$ docker-compose rm adminer
+$ docker compose rm db
+$ docker compose rm adminer
 ```
 
 ---
